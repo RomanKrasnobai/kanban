@@ -1,0 +1,14 @@
+{
+  "name": "kanban",
+  "private": true,
+  "packageManager": "yarn@4.18.1",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "yarn workspaces foreach --all --parallel --interlaced run dev",
+    "build": "yarn workspaces foreach --all --topological run build",
+    "lint": "yarn workspaces foreach --all run lint"
+  }
+}
